@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Vishal - Portfolio</title>
+<title>Vishal Portfolio</title>
 <style>
 body {
-  font-family: Arial;
-  background: #f2f2f2;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
-.container {
-  background: white;
+header {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+}
+nav a {
+  color: #00ffea;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 40px;
+  text-align: center;
+}
+.card {
+  background: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-}
-h1 {
-  color: #333;
+  margin: 20px auto;
+  max-width: 600px;
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <h1>Hi, I'm Vishal</h1>
-  <p>DBMS enthusiast | Python Programmer | Learner</p>
-  <h2>About Me</h2>
-  <p>I am studying B.Sc Computer Application...</p>
-  <h2>Education</h2>
-  <p>MCBU University, Major in DBMS</p>
-  <h2>Ideas & Suggestions</h2>
-  <p>Tech is a solution, not just a tool.</p>
-  <h2>Contact</h2>
-  <p>Email: vishal1432d@gmail.com</p>
-</div>
+
+<header>
+  <h1>Hi, I'm Vishal 👋</h1>
+  <p>DBMS Enthusiast • Python Coder</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am Vishal, a B.Sc Computer Application student passionate about DBMS, Python and building digital solutions.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="card">
+    <h2>My Skills</h2>
+    <p>✔ Python</p>
+    <p>✔ DBMS</p>
+    <p>✔ HTML Basic Web Design</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact Me</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <p>Instagram: @yourusername</p>
+  </div>
+</section>
+
 </body>
 </html>
