@@ -1,107 +1,27 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vishal Ahirwar | Portfolio • Blog • Freelancing</title>
-
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0d0d0d;
-  color:#fff;
-}
-header{
-  background:linear-gradient(45deg,#111,#222);
-  padding:30px;
-  text-align:center;
-}
-nav a{
-  color:#00ffe7;
-  margin:0 12px;
-  text-decoration:none;
-  font-weight:bold;
-}
-section{
-  padding:40px 20px;
-  text-align:center;
-}
-.card{
-  background:#151515;
-  border:1px solid #00ffe7;
-  border-radius:10px;
-  padding:20px;
-  max-width:700px;
-  margin:20px auto;
-}
-button{
-  background:#00ffe7;
-  border:none;
-  padding:10px 16px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
-}
-footer{
-  background:#111;
-  padding:15px;
-  text-align:center;
-  font-size:14px;
-}
-</style>
+    <title>Loud Sound Button</title>
 </head>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
 
-<body>
+    <h2>Click the Button</h2>
 
-<header>
-  <h1>Vishal Ahirwar</h1>
-  <p>B.Sc Computer Applications | Web Learner | Future Freelancer</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#blog">Blog</a>
-    <a href="#earn">Earning</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <button onclick="playSound()" 
+        style="padding:20px 40px; font-size:20px; cursor:pointer;">
+        Play Sound
+    </button>
 
-<section id="about">
-  <div class="card">
-    <h2>About Me</h2>
-    <p>Main B.Sc Computer Applications ka student hoon.  
-    Mujhe Website banana, Blogging aur Online Earning seekhni hai.</p>
-  </div>
-</section>
+    <!-- Apni audio file ka naam yaha daalein -->
+    <audio id="mySound" src="sound.mp3"></audio>
 
-<section id="blog">
-  <div class="card">
-    <h2>My Blog</h2>
-    <p><b>Python kya hai?</b> – Python beginners ke liye best programming language hai.</p>
-    <p><b>Website kaise banaye?</b> – HTML aur CSS se free website ban sakti hai.</p>
-  </div>
-</section>
-
-<section id="earn">
-  <div class="card">
-    <h2>Online Earning</h2>
-    <p>✔ Website Design (Basic)</p>
-    <p>✔ Blogging (Future)</p>
-    <p>✔ Freelancing (Learning Stage)</p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="card">
-    <h2>Contact Me</h2>
-    <p>Email: <b>vishal1432@gmail.com</b></p>
-    <p style="color:white">Instagram:<a href="https://www.instagram.com/vishal.ahirwar.in?igsh=NWhvM3ZuMXMyaHJr"><b>@vishal.ahirwar.in</b></a></p>
-    <button onclick="alert('Thanks for visiting!')">Say Hello 👋</button>
-  </div>
-</section>
-
-<footer>
-  © 2026 Vishal Ahirwar | All Rights Reserved
-</footer>
+    <script>
+        function playSound() {
+            var sound = document.getElementById("mySound");
+            sound.volume = 1.0; // Full volume (0.0 se 1.0 tak hota hai)
+            sound.play();
+        }
+    </script>
 
 </body>
 </html>
