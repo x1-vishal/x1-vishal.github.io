@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Loud Sound Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loud Sound</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        button {
+            padding: 25px 50px;
+            font-size: 22px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body style="text-align:center; margin-top:100px; font-family:Arial;">
+<body>
 
-    <h2>Click the Button</h2>
+    <button onclick="playSound()">Open Gift</button>
 
-    <button onclick="playSound()" 
-        style="padding:20px 40px; font-size:20px; cursor:pointer;">
-        Play Sound
-    </button>
-
-    <!-- Apni audio file ka naam yaha daalein -->
-    <audio id="mySound" src="sound.mp3"></audio>
+    <audio id="mySound">
+        <source src="sound.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         function playSound() {
             var sound = document.getElementById("mySound");
-            sound.volume = 1.0; // Full volume (0.0 se 1.0 tak hota hai)
+            sound.volume = 1.0;
             sound.play();
         }
     </script>
