@@ -1,45 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loud Sound</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don't Click</title>
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-        }
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
 
-        button {
-            padding: 25px 50px;
-            font-size: 22px;
-            background: red;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-    </style>
+button {
+    padding: 25px 60px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px red, 0 0 40px red;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.flash {
+    animation: flash 0.1s infinite;
+}
+
+@keyframes flash {
+    0% { background: black; }
+    50% { background: white; }
+    100% { background: black; }
+}
+
+.shake {
+    animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(5px, 5px); }
+    25% { transform: translate(-5px, 5px); }
+    50% { transform: translate(5px, -5px); }
+    75% { transform: translate(-5px, -5px); }
+    100% { transform: translate(0, 0); }
+}
+</style>
 </head>
+
 <body>
 
-    <button onclick="playSound()">Open Gift</button>
+<button onclick="startPrank()">DON'T CLICK 😈</button>
 
-    <audio id="mySound">
-        <source src="sound.mp3" type="audio/mpeg">
-    </audio>
+<audio id="mySound">
+    <source src="sound.mp3" type="audio/mpeg">
+</audio>
 
-    <script>
-        function playSound() {
-            var sound = document.getElementById("mySound");
-            sound.volume = 1.0;
-            sound.play();
-        }
-    </script>
+<script>
+function startPrank() {
+    var sound = document.getElementById("mySound");
+    sound.volume = 1.0;
+    sound.play();
+
+    document.body.classList.add("flash");
+    document.body.classList.add("shake");
+
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    }
+}
+</script>
 
 </body>
 </html>
