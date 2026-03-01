@@ -1,85 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>C++ Programs | Vishal Coding Hub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C++ Programs | Vishal Coding Hub</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1d2671, #c33764);
-            color: white;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            padding: 30px;
-            font-size: 32px;
-            font-weight: bold;
-        }
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: white;
+}
 
-        .program-container {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+/* Main content center */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
 
-        .card {
-            background: white;
-            color: black;
-            padding: 20px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
+h1 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: #00c6ff;
-            color: white;
-        }
+.program-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        .back {
-            display: inline-block;
-            margin-top: 60px;
-            text-decoration: none;
-            padding: 10px 25px;
-            border: 2px solid white;
-            border-radius: 6px;
-            color: white;
-            transition: 0.3s;
-        }
+.card {
+    background: white;
+    color: black;
+    padding: 20px 50px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
-        .back:hover {
-            background: white;
-            color: black;
-        }
+.card:hover {
+    transform: translateY(-8px);
+    background: #00c6ff;
+    color: white;
+}
 
-        footer {
-            margin-top: 60px;
-            padding: 15px;
-            font-size: 14px;
-            background: rgba(0,0,0,0.3);
-        }
-    </style>
+.back {
+    margin-top: 40px;
+    padding: 10px 25px;
+    border: 2px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: white;
+    color: black;
+}
+
+/* Footer always bottom */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+    font-size: 14px;
+}
+
+/* Mobile improvement */
+@media(max-width:600px){
+    h1{
+        font-size: 24px;
+    }
+    .card{
+        width: 80%;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>💻 My C++ Programs</header>
+<div class="main">
+    <h1>💻 My C++ Programs</h1>
 
-<div class="program-container">
-    <a href="vowel.html" class="card">Vowel Checker</a>
-    <a href="calculator.html" class="card">Calculator</a>
+    <div class="program-container">
+        <a href="vowel.html" class="card">Vowel Checker</a>
+        <a href="calculator.html" class="card">Calculator</a>
+    </div>
+
+    <a href="index.html" class="back">← Back to Home</a>
 </div>
-
-<a href="index.html" class="back">⬅ Back to Home</a>
 
 <footer>
     © 2026 Vishal Ahirwar
