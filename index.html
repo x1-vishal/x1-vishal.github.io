@@ -3,83 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>9th & 11th Result</title>
+<title>Result Portal</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #1d2671, #c33764);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Glass Effect Card */
 .card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     width: 320px;
     text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    animation: fadeIn 0.8s ease-in-out;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
+/* Logo */
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Heading */
 h2 {
     margin-bottom: 20px;
-    color: #333;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
 }
 
+/* Input */
 input {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: none;
     margin-bottom: 15px;
     font-size: 15px;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: #667eea;
     outline: none;
-    box-shadow: 0 0 5px rgba(102,126,234,0.5);
 }
 
+/* Button */
 button {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background: #667eea;
-    color: white;
+    background: #ffffff;
+    color: #333;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #5a67d8;
+    background: #ddd;
 }
 
+/* Footer */
 .footer {
     margin-top: 12px;
     font-size: 12px;
-    color: gray;
+    color: #eee;
 }
 
 /* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
     to {
         opacity: 1;
@@ -93,13 +102,22 @@ button:hover {
 <body>
 
 <div class="card">
-    <h2>9th and 11th Result 2025-26</h2>
 
+    <!-- Logo -->
+    <img src="logo.png" class="logo" alt="School Logo">
+
+    <!-- Heading -->
+    <h2>9th & 11th Examination Result 2025-26</h2>
+
+    <!-- Input -->
     <input type="text" id="roll" placeholder="Enter Roll Number">
 
+    <!-- Button -->
     <button onclick="checkResult()">View Result</button>
 
+    <!-- Footer -->
     <div class="footer">Powered by EMS Portal</div>
+
 </div>
 
 <script>
